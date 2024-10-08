@@ -104,3 +104,27 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
+
+
+
+
+
+
+
+@media screen and (max-width: 660px) {
+    .sidebar {
+        display: none;
+    }
+
+    .grid {
+        display: flex;
+        padding: 10px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;    
+    }
+    
+  }
+
+
+
