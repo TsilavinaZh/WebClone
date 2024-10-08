@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react';
+mport { useState, useEffect } from 'react';
+
 import productsData from '../data/DataProduits.json';
 
 export default function Card() {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categories, setCategories] = useState({});
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null); // État pour gérer le produit sélectionné
-  const [downloadCount, setDownloadCount] = useState(1); // État pour gérer le nombre de téléchargements
 
   useEffect(() => {
     // Charger les 30 premiers produits
@@ -39,17 +38,6 @@ export default function Card() {
     ).slice(0, 30); // Limite à 30 images
 
     setFilteredProducts(filtered);
-  };
-
-  // Fonction qui s'exécute lors du clic sur une image
-  const handleImageClick = (product) => {
-    setSelectedProduct(product);
-  };
-
-  // Fonction pour le téléchargement
-  const handleDownload = () => {
-    console.log(`Téléchargement de ${downloadCount} fois pour le produit :`, selectedProduct);
-    // Logique de téléchargement ici
   };
 
   return (
@@ -86,35 +74,8 @@ export default function Card() {
       <div className="grid">
         {filteredProducts.map(product => (
           <div className="card" key={product.id}>
-            <img
-              src={product.url}
-              alt={product.categorie}
-              onClick={() => handleImageClick(product)} // Clic sur l'image
-              style={{ cursor: 'pointer' }}
-            />
+            <img src={product.url} alt={product.categorie} />
             <p className="price">€ {product.prix}</p>
-
-            {/* Afficher le formulaire lorsque l'image est cliquée */}
-            {selectedProduct && selectedProduct.id === product.id && (
-              <div className="download-form">
-                <label>
-                  Nombre de téléchargements:
-                  <input
-                    type="number"
-                    value={downloadCount}
-                    onChange={(e) => setDownloadCount(e.target.value)}
-                    min="1"
-                    style={{ marginLeft: '10px', padding: '5px' }}
-                  />
-                </label>
-                <button
-                  onClick={handleDownload}
-                  style={{ display: 'block', marginTop: '10px', padding: '5px 10px' }}
-                >
-                  Télécharger
-                </button>
-              </div>
-            )}
           </div>
         ))}
       </div>
@@ -122,12 +83,4 @@ export default function Card() {
   );
 }
 
-
-
-
-
-
-
-
-
-          
+                                         
