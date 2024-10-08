@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2d0935;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    padding: 20px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 1;
+    height: 100%;
+    overflow-y: auto;
+    left: 1;
+    /* Permet de faire défiler si la sidebar a trop de contenu */
+    width: 260px;
+    background-color: #3e1451;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+
+
+.sidebar h3 {
+    color: #f0488b;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.filter-group {
+    margin-bottom: 30px;
+}
+
+.price-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories li {
+    margin-bottom: 10px;
+}
+
+.categories li input {
+    margin-right: 8px;
+}
+
+.grid {
+    /* display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap; */
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-left: 24%;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+
+
+
+.card {
+    background-color: #3e1451;
+    border-radius: 10px;
+    text-align: center;
+    padding: 6%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+} */
+
+.card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.price {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
