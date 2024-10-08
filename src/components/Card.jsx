@@ -1,4 +1,4 @@
-mport { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import productsData from '../data/DataProduits.json';
 
