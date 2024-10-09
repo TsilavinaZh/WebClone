@@ -85,7 +85,7 @@ body {
     background-color: #3e1451;
     border-radius: 10px;
     text-align: center;
-    padding: 70px;
+    padding: 60px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -98,7 +98,7 @@ body {
 .card img {
     width: 150px;
     height: 150px;
-    border: 15px solid white;
+    border: 40px solid white;
     border-radius: 10px;
     object-fit: cover;
 }
