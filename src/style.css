@@ -98,7 +98,7 @@ body {
 .card img {
     width: 150px;
     height: 150px;
-    border: 6px solid white;
+    border: 15px solid white;
     border-radius: 10px;
     object-fit: cover;
 }
