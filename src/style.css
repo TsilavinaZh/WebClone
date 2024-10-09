@@ -68,7 +68,7 @@ body {
     flex-wrap: wrap; */
     display: flex;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 10px;
     padding-left: 20%;
     padding-right: 10px;
 
