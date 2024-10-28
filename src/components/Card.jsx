@@ -127,7 +127,8 @@ export default function Card() {
                 <option>100x100</option>
                 <option>120x120</option>
               </select>
-              <p className="price">Price: € {selectedProduct.prix}</p>
+              <hr className='hr' />
+              <p className="price"><div>Price:</div><div> € {selectedProduct.prix}</div></p>
               <button className="add-to-cart" onClick={openFormModal}>Add to Cart</button>
             </div>
           </div>
@@ -136,127 +137,127 @@ export default function Card() {
 
       {/* Modal for Add to Cart form */}
       {isFormModalOpen && (
-       
 
 
-     <center>
-         <div className="modal" onClick={closeFormModal}>
-          <div className="modal-content " onClick={(e) => e.stopPropagation()}>
-            <span className="close" onClick={closeFormModal}>&times;</span>
-            <form onSubmit={handleFormSubmit} className='modal-forms-content'>
-              <h1>Canvas Order Form</h1>
-              <label>
-                {/* Voornaam: */}
-                <input
-                  placeholder='First Name '
-                  type="text"
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleFormChange}
-                  required
-                />
-              </label>
-              <label>
-                {/* Achternaam: */}
-                <input
-                  type="text"
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleFormChange}
-                  required
-                  placeholder='Last Name'
-                />
-              </label>
-              <br />
-              <br />
-              <label>
-                {/* Email: */}
-                <input
-                  placeholder='Email:'
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleFormChange}
-                  required
-                />
-              </label>
-              <label>
-                {/* Telefoon: */}
-                <input
-                  placeholder='Phone  '
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleFormChange}
-                  required
-                />
-              </label>
-              <br />
-              <br />
-              <label>
-                {/* Bezorgadres: */}
-                <input
-                  placeholder='Delivery Address '
-                  type="text"
-                  name="address"
-                  value={formData.address}
-                  onChange={handleFormChange}
-                  required
-                />
-              </label>
-              <label>
-                {/* Stad: */}
-                <input
-                  // Stad:
-                  placeholder='City  '
-                  type="text"
-                  name="city"
-                  value={formData.city}
-                  onChange={handleFormChange}
-                  required
-                />
-              </label>
-              <br />
-              <br />
-              <label>
-                {/* Provincie: */}
-                <input
-                  placeholder='Province  '
-                  type="text"
-                  name="province"
-                  value={formData.province}
-                  onChange={handleFormChange}
-                  required
-                />
-              </label>
-              <label>
-                {/* Postcode: */}
-                <input
-                  placeholder='Postal Code'
-                  type="text"
-                  name="postalCode"
-                  value={formData.postalCode}
-                  onChange={handleFormChange}
-                  required
-                />
-              </label><br /> <br />
-              <label>
-                {/* Extra Opmerkingen: */}
-                <textarea
-                placeholder='Additional Remarks'
-                  name="extraComments"
-                  value={formData.extraComments}
-                  onChange={handleFormChange}
-                />
-              </label>
-              <br />
-              <br />
 
-              <button type="submit" className="add-to-cart2">Place Order</button>
-            </form>
+        <center>
+          <div className="modal" onClick={closeFormModal}>
+            <div className="modal-content " onClick={(e) => e.stopPropagation()}>
+              <span className="close" onClick={closeFormModal}>&times;</span>
+              <form onSubmit={handleFormSubmit} className='modal-forms-content'>
+                <h1>Canvas Order Form</h1>
+                <label>
+                  {/* Voornaam: */}
+                  <input
+                    placeholder='First Name '
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleFormChange}
+                    required
+                  />
+                </label>
+                <label>
+                  {/* Achternaam: */}
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleFormChange}
+                    required
+                    placeholder='Last Name'
+                  />
+                </label>
+                <br />
+                <br />
+                <label>
+                  {/* Email: */}
+                  <input
+                    placeholder='Email:'
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleFormChange}
+                    required
+                  />
+                </label>
+                <label>
+                  {/* Telefoon: */}
+                  <input
+                    placeholder='Phone  '
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleFormChange}
+                    required
+                  />
+                </label>
+                <br />
+                <br />
+                <label>
+                  {/* Bezorgadres: */}
+                  <input
+                    placeholder='Delivery Address '
+                    type="text"
+                    name="address"
+                    value={formData.address}
+                    onChange={handleFormChange}
+                    required
+                  />
+                </label>
+                <label>
+                  {/* Stad: */}
+                  <input
+                    // Stad:
+                    placeholder='City  '
+                    type="text"
+                    name="city"
+                    value={formData.city}
+                    onChange={handleFormChange}
+                    required
+                  />
+                </label>
+                <br />
+                <br />
+                <label>
+                  {/* Provincie: */}
+                  <input
+                    placeholder='Province  '
+                    type="text"
+                    name="province"
+                    value={formData.province}
+                    onChange={handleFormChange}
+                    required
+                  />
+                </label>
+                <label>
+                  {/* Postcode: */}
+                  <input
+                    placeholder='Postal Code'
+                    type="text"
+                    name="postalCode"
+                    value={formData.postalCode}
+                    onChange={handleFormChange}
+                    required
+                  />
+                </label><br /> <br />
+                <label>
+                  {/* Extra Opmerkingen: */}
+                  <textarea
+                    placeholder='Additional Remarks'
+                    name="extraComments"
+                    value={formData.extraComments}
+                    onChange={handleFormChange}
+                  />
+                </label>
+                <br />
+                <br />
+
+                <button type="submit" className="add-to-cart2">Place Order</button>
+              </form>
+            </div>
           </div>
-        </div>
-     </center>
+        </center>
 
       )}
     </div>
