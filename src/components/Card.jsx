@@ -103,7 +103,10 @@ export default function Card() {
         {filteredProducts.map(product => (
           <div className="card" key={product.id} onClick={() => openModal(product)}>
             <img src={product.url} alt={product.categorie} />
-            <p className="price">€ {product.prix}</p>
+            <div>
+            <center><p className="price">€ {product.prix}</p></center>
+
+            </div>
           </div>
         ))}
       </div>
@@ -128,7 +131,7 @@ export default function Card() {
                 <option>120x120</option>
               </select>
               <hr className='hr' />
-              <p className="price"><div>Price:</div><div> € {selectedProduct.prix}</div></p>
+              <p className="price"><div>Price: €</div> <div>€{selectedProduct.prix}</div></p>
               <button className="add-to-cart" onClick={openFormModal}>Add to Cart</button>
             </div>
           </div>
